@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'task_statuses',
     #phone number field
     'phonenumber_field',
+    #DRF
+    'rest_framework',
     
 ]
 
