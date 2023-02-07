@@ -17,11 +17,7 @@ class User(AbstractUser):
     username = models.CharField(max_length=255, unique=True)
     password = models.CharField(max_length=255)
     phone = PhoneNumberField()
-    secondary_phone = models.CharField(max_length=255, blank=True)
-
-
-    USERNAME_FIELD = "username"
-    REQUIRED_FIELDS = []
+    secondary_phone = PhoneNumberField()
 
 
     def __str__(self):

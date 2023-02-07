@@ -10,5 +10,8 @@ class Project(models.Model):
     dete_start = models.DateField()
     date_end = models.DateField()
     started_at = models.DateTimeField()
-    finished_at = models.DateTimeField()
+    finished_at = models.DateTimeField(null=True)
+
+    def __str__(self):
+        return self.name
     
