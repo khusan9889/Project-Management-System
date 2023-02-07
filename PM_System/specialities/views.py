@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from rest_framework import generics
 from .models import Speciality
 from .serializers import SpecialitySerializer
@@ -14,3 +13,7 @@ class SpecialityAPIDetailView(generics.RetrieveUpdateDestroyAPIView):
 class SpecialityCreateView(generics.CreateAPIView):
     queryset = Speciality.objects.all()
     serializer_class = SpecialitySerializer
+
+
+
+

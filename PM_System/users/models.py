@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser
+from django.contrib.auth.models import AbstractUser
 from phonenumber_field.formfields import PhoneNumberField
 from specialities.models import Speciality
 from positions.models import Position
@@ -7,7 +7,7 @@ from roles.models import Role
 
 # Create your models here.
 
-class User(AbstractBaseUser):
+class User(AbstractUser):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     patronymic = models.CharField(max_length=100)
@@ -25,5 +25,5 @@ class User(AbstractBaseUser):
 
 
     def __str__(self):
-        return self.email
+        return self.username
 

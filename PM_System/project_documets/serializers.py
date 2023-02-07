@@ -6,4 +6,3 @@ class ProjectDocumentSerializers(serializers.ModelSerializer):
     class Meta:
         models = Project_document
         fields = '__all__'
-

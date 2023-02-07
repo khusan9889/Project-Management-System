@@ -5,5 +5,5 @@ from projects.models import Project
 class Project_document(models.Model): 
     project_id = models.ForeignKey(Project, on_delete=models.SET_NULL, null=True, blank=True)
     name = models.CharField(max_length=255)
-    file = models.CharField(max_length=255)
+    file = models.FileField(upload_to='documents/')
     description = models.TextField()
